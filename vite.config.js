@@ -1,8 +1,4 @@
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-
-// Vite configuration
-export default defineConfig({
-  plugins: [react()],
+export default {
   // ... other config settings
-});
+  base: "/Calc/", // Replace with your repository name
+};
