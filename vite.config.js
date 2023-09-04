@@ -3,7 +3,6 @@ import { defineConfig } from "vite";
 
 // Vite configuration
 export default defineConfig({
-  plugins: [react({ base: "/Calc/" })],
-
+  plugins: [react()],
   // ... other config settings
 });
