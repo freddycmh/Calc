@@ -141,32 +141,32 @@ const CostCalculator = () => {
         value: units,
       },
       {
-        label: "garment Total",
+        label: "Garment Total",
         name: "garmentTotal",
         value: garmentTotal,
       },
       {
-        label: "decoration",
+        label: "Decoration",
         name: "decoration",
         value: decoration,
       },
       {
-        label: "shipping",
+        label: "Shipping",
         name: "shipping",
         value: shipping,
       },
       {
-        label: "fees",
+        label: "Fees",
         name: "fees",
         value: fees,
       },
       {
-        label: "Email",
+        label: "Client Email",
         name: "email",
         value: email,
       },
       {
-        label: "quota",
+        label: "Quote Number",
         name: "quota",
         value: quota,
       },
@@ -208,11 +208,18 @@ const CostCalculator = () => {
         <h2>Total Cost: ${parseFloat(totalCost).toFixed(2)}</h2>
         <h2>Cost Per Unit: ${parseFloat(costPerUnit).toFixed(2)}</h2>
         <h2>
-          Cost Per Unit margin:{" "}
+          Price Per Unit margin:{" "}
           {parseFloat(
             ((costPerUnitForOrder - costPerUnit) / costPerUnit) * 100
           ).toFixed(2)}
           % (${parseFloat(costPerUnitForOrder).toFixed(2)})
+        </h2>
+        <h2>
+          Total Price:
+          ${parseFloat(costPerUnitForOrder).toFixed(2)*units}
+        </h2>
+        <h2>
+          Total Profit:  ${parseFloat((costPerUnitForOrder)*units-totalCost).toFixed(2)}
         </h2>
       </div>
     </div>

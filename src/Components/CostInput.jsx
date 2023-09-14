@@ -4,7 +4,7 @@ const CostInput = ({ label, name, value, handler }) => {
   return (
     <div className="input-container">
       <label htmlFor={name}>{label}:</label>
-      {!isUnitsInput && <span>$</span>}
+      {!isUnitsInput && <span></span>}
       <input
         type="text"
         id={name}
